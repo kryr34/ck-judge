@@ -18,4 +18,4 @@ main.o: main.c impl.c
 
 # Clean
 clean:
-	rm -f $(OBJ) $(TARGET)
+	rm -f *.o $(TARGET)
