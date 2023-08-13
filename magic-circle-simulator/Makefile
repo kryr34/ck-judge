@@ -5,19 +5,15 @@ CFLAGS = -Wall -g
 # Target executable name
 TARGET = my_program.out
 
-# Source and object files
-SRC = main.c impl.c
-OBJ = $(SRC:.c=.o)
-
 # Default target
 all: $(TARGET)
 
 # Linking
-$(TARGET): $(OBJ)
+$(TARGET): main.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 # Compilation
-%.o: %.c
+main.o: main.c impl.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 # Clean

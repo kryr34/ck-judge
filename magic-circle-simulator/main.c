@@ -68,3 +68,5 @@ void print_magic_circle(struct head_t *arr, int size) {
     }
     return;
 }
+
+#include "impl.c"
